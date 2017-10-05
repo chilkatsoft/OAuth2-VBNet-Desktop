@@ -1,0 +1,12 @@
+C:\ckGitHubProjects\OAuth2-VBNet-Desktop\OAuth2\bin\Release\OAuth2.exe.config
+C:\ckGitHubProjects\OAuth2-VBNet-Desktop\OAuth2\bin\Release\OAuth2.exe
+C:\ckGitHubProjects\OAuth2-VBNet-Desktop\OAuth2\bin\Release\OAuth2.pdb
+C:\ckGitHubProjects\OAuth2-VBNet-Desktop\OAuth2\bin\Release\OAuth2.xml
+C:\ckGitHubProjects\OAuth2-VBNet-Desktop\OAuth2\bin\Release\ChilkatDotNet45.dll
+C:\ckGitHubProjects\OAuth2-VBNet-Desktop\OAuth2\obj\Release\OAuth2.vbprojResolveAssemblyReference.cache
+C:\ckGitHubProjects\OAuth2-VBNet-Desktop\OAuth2\obj\Release\OAuth2.Form1.resources
+C:\ckGitHubProjects\OAuth2-VBNet-Desktop\OAuth2\obj\Release\OAuth2.Resources.resources
+C:\ckGitHubProjects\OAuth2-VBNet-Desktop\OAuth2\obj\Release\OAuth2.vbproj.GenerateResource.Cache
+C:\ckGitHubProjects\OAuth2-VBNet-Desktop\OAuth2\obj\Release\OAuth2.exe
+C:\ckGitHubProjects\OAuth2-VBNet-Desktop\OAuth2\obj\Release\OAuth2.xml
+C:\ckGitHubProjects\OAuth2-VBNet-Desktop\OAuth2\obj\Release\OAuth2.pdb
