@@ -75,7 +75,7 @@ Public Class Form1
     End Sub
 
 
-    Private Sub do_oauth2(p As OAuth2Params)
+    Private Sub do_oauth2(p As OAuth2Params, bCodeChallenge As Boolean)
         Dim oauth2 As New Chilkat.OAuth2()
 
         oauth2.ListenPort = p.ListenPort
@@ -84,8 +84,10 @@ Public Class Form1
         oauth2.TokenEndpoint = p.TokenEndpoint
         oauth2.ClientId = p.ClientId
         oauth2.ClientSecret = p.ClientSecret
-        oauth2.CodeChallenge = True
-        oauth2.CodeChallengeMethod = "S256"
+        oauth2.CodeChallenge = bCodeChallenge
+        If (bCodeChallenge) Then
+            oauth2.CodeChallengeMethod = "S256"
+        End If
         If (p.Scope IsNot Nothing) AndAlso (p.Scope.Length > 0) Then
             oauth2.Scope = p.Scope
         End If
@@ -163,7 +165,7 @@ Public Class Form1
         ' See https://developers.facebook.com/docs/facebook-login/permissions/ for a full list of permissions.
         p.Scope = "public_profile,user_friends,email,user_posts,user_likes,user_photos"
 
-        do_oauth2(p)
+        do_oauth2(p, True)
 
         Return
     End Sub
@@ -196,7 +198,7 @@ Public Class Form1
         ' See https://developers.google.com/identity/protocols/googlescopes
         p.Scope = "https://www.googleapis.com/auth/drive"
 
-        do_oauth2(p)
+        do_oauth2(p, True)
 
         Return
     End Sub
@@ -214,7 +216,7 @@ Public Class Form1
         p.TokenEndpoint = linkedinTokenEndpoint
         p.ClientId = linkedinClientId
         p.ClientSecret = linkedinClientSecret
-        do_oauth2(p)
+        do_oauth2(p, False)
 
         Return
     End Sub
@@ -231,7 +233,7 @@ Public Class Form1
         p.TokenEndpoint = salesForceTokenEndpoint
         p.ClientId = salesForceClientId
         p.ClientSecret = salesForceClientSecret
-        do_oauth2(p)
+        do_oauth2(p, True)
 
         Return
     End Sub
@@ -248,7 +250,7 @@ Public Class Form1
         p.TokenEndpoint = gitTokenEndpoint
         p.ClientId = gitClientId
         p.ClientSecret = gitClientSecret
-        do_oauth2(p)
+        do_oauth2(p, True)
 
         Return
     End Sub
